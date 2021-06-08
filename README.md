@@ -10,4 +10,4 @@ In the water treatment process, to treat the water, different types of chemicals
 GNU General Public License v3.0
 
 ## Contributors
-Anirudh Bhat - Author
+Anirudh Bhat 

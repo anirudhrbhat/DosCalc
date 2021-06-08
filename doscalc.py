@@ -1,5 +1,7 @@
-from tkinter import *
-from tkinter import filedialog
+from tkinter import Tk
+from tkinter import Label
+from tkinter import Entry
+from tkinter import Button
 
 def calc():
 	#Delete any existing values
@@ -7,20 +9,15 @@ def calc():
 	qm.delete(0,'end')
 
 	#Calculation of Dosing rate
-	Qp = int(qp.get())
-	X = int(x.get())
+	Qp,X = float(qp.get()),float(x.get())
 	dr_calc = Qp*X
 	dr.insert(0, dr_calc)
 
 	#Calculation of Quantity
-	Qd = int(qd.get())
-	Vt = int(vt.get())
-	conc = int(con.get())
+	Qd,Vt,conc = float(qd.get()),float(vt.get()),float(con.get())
 	d = dr_calc*(100/conc)
-	u = (Vt*d)/Qd
-	u = round(u,10 )/1000
-	qm.insert(0, u)
-
+	u = ((Vt*d)/Qd)/1000
+	qm.insert(0, round(u,1))
 
 
 #Creating the window
